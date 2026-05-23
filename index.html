@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Ramandeep Kaur — UI Architect & Senior Full Stack Developer with 11+ years experience in Angular, React, TypeScript, Java, Node.js, AWS and Azure."/>
+<meta name="keywords" content="Ramandeep Kaur, UI Architect, Angular Developer, React Developer, Full Stack Developer, TypeScript, Java Spring Boot, NJ NY"/>
+<meta property="og:title" content="Ramandeep Kaur — UI Architect & Full Stack Developer"/>
+<meta property="og:description" content="11+ years building enterprise Angular, React, and Java applications at Citibank, Pfizer, and SynergyLynk IT"/>
+<title>Ramandeep Kaur — UI Architect & Full Stack Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+<style>
+/* ═══════════════════════════════════════════════
+   RAMANDEEP KAUR PORTFOLIO
+   Aesthetic: Dark editorial — precision engineering
+   Deep space navy + electric teal + white
+   Inspired by high-end tech product sites
+═══════════════════════════════════════════════ */
+:root {
+  --bg:        #03080f;
+  --surface:   #070e1a;
+  --card:      #0a1525;
+  --panel:     #0d1c30;
+  --teal:      #00d4c8;
+  --teal2:     #00b8ad;
+  --blue:      #2563eb;
+  --violet:    #7c3aed;
+  --white:     #f0f8ff;
+  --muted:     #5a7a9a;
+  --dim:       #1a3050;
+  --border:    rgba(0,212,200,0.12);
+  --glow:      rgba(0,212,200,0.25);
+  --font:      'DM Sans', sans-serif;
+  --display:   'Syne', sans-serif;
+  --mono:      'JetBrains Mono', monospace;
+  --r:         14px;
+  --r-lg:      20px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: var(--font); background: var(--bg); color: var(--white); overflow-x: hidden; }
+::selection { background: var(--teal); color: var(--bg); }
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 3px; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ── BACKGROUND ── */
+.bg-layer {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+}
+.bg-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,212,200,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,200,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.bg-orb {
+  position: absolute; border-radius: 50%; filter: blur(140px);
+}
+.orb1 { width:700px;height:700px;background:rgba(0,212,200,0.07);top:-300px;right:-200px;animation:drift 28s ease-in-out infinite; }
+.orb2 { width:500px;height:500px;background:rgba(37,99,235,0.06);bottom:-100px;left:-100px;animation:drift 22s ease-in-out infinite reverse; }
+.orb3 { width:350px;height:350px;background:rgba(124,58,237,0.05);top:45%;left:45%;animation:drift 18s ease-in-out infinite 6s; }
+@keyframes drift { 0%,100%{transform:translate(0,0)} 33%{transform:translate(40px,-50px)} 66%{transform:translate(-35px,45px)} }
+
+/* ── LAYOUT ── */
+.page { position: relative; z-index: 1; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 20px 0; border-bottom: 1px solid var(--border);
+  background: rgba(3,8,15,0.85); backdrop-filter: blur(24px);
+  animation: fadeDown .6s ease both;
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.nav-logo { display: flex; align-items: center; gap: 12px; }
+.nav-avatar {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--teal), #0099ff);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-size: 16px; font-weight: 800; color: var(--bg);
+  box-shadow: 0 0 24px var(--glow); letter-spacing: -0.02em;
+}
+.nav-name { font-family: var(--display); font-size: 16px; font-weight: 700; letter-spacing: -0.02em; }
+.nav-name span { color: var(--teal); }
+.nav-links { display: flex; align-items: center; gap: 4px; }
+.nav-link {
+  padding: 7px 15px; border-radius: 8px; font-size: 13px; font-weight: 500;
+  color: var(--muted); transition: all .2s;
+}
+.nav-link:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+.nav-cta {
+  padding: 9px 22px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--teal), #0099ff);
+  color: var(--bg); font-size: 13px; font-weight: 700;
+  box-shadow: 0 4px 20px var(--glow); transition: all .25s;
+}
+.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,212,200,0.4); }
+.nav-status {
+  display: flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 11px; color: #22c55e;
+  letter-spacing: .12em;
+}
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.6)} }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  padding: 140px 0 80px; position: relative;
+}
+.hero-inner { display: grid; grid-template-columns: 1fr 440px; gap: 80px; align-items: center; }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 10px; margin-bottom: 28px;
+  font-family: var(--mono); font-size: 10px; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--teal);
+}
+.hero-tag::before { content: ''; width: 32px; height: 1.5px; background: var(--teal); }
+.hero-title {
+  font-family: var(--display); font-size: clamp(44px, 5.5vw, 72px);
+  font-weight: 800; letter-spacing: -0.05em; line-height: .92;
+  margin-bottom: 20px;
+}
+.hero-title .grad {
+  background: linear-gradient(135deg, var(--teal) 0%, #0099ff 40%, #7c3aed 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero-sub {
+  font-size: 17px; line-height: 1.75; color: var(--muted);
+  max-width: 520px; margin-bottom: 40px;
+}
+.hero-sub strong { color: var(--white); font-weight: 500; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; }
+.btn-primary {
+  padding: 14px 32px; border-radius: 12px; border: none;
+  background: linear-gradient(135deg, var(--teal), #0099ff);
+  color: var(--bg); font-size: 15px; font-weight: 700;
+  cursor: pointer; font-family: var(--font); text-decoration: none;
+  box-shadow: 0 6px 24px var(--glow); transition: all .25s;
+  display: inline-flex; align-items: center; gap: 9px;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(0,212,200,0.5); }
+.btn-ghost {
+  padding: 14px 32px; border-radius: 12px;
+  border: 1px solid rgba(0,212,200,0.25);
+  background: rgba(0,212,200,0.06);
+  color: var(--white); font-size: 15px; font-weight: 600;
+  cursor: pointer; font-family: var(--font); text-decoration: none;
+  transition: all .25s; display: inline-flex; align-items: center; gap: 9px;
+}
+.btn-ghost:hover { border-color: var(--teal); background: rgba(0,212,200,0.12); }
+
+/* Stats strip */
+.hero-stats { display: flex; gap: 40px; flex-wrap: wrap; }
+.stat { }
+.stat-num {
+  font-family: var(--display); font-size: 40px; font-weight: 900;
+  letter-spacing: -0.05em; line-height: 1;
+  background: linear-gradient(135deg, var(--white), var(--teal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.stat-label { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-top: 5px; }
+
+/* Hero card */
+.hero-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 22px;
+  padding: 28px; position: relative; overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(0,212,200,0.04), 0 32px 80px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.04);
+  animation: fadeUp .8s .4s ease both;
+}
+.hero-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--teal), #0099ff, var(--violet)); }
+.hc-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.hc-title { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.hc-live { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 10px; color: #22c55e; }
+.hc-dot { width: 5px; height: 5px; border-radius: 50%; background: #22c55e; animation: pulse 2s infinite; }
+.skill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
+.skill-item {
+  padding: 10px 12px; border-radius: 10px;
+  background: rgba(0,212,200,0.05); border: 1px solid rgba(0,212,200,0.1);
+  font-size: 12px; font-weight: 600; color: var(--white); transition: all .2s;
+}
+.skill-item:hover { border-color: rgba(0,212,200,0.3); background: rgba(0,212,200,0.1); }
+.skill-item span { color: var(--teal); font-family: var(--mono); font-size: 10px; display: block; margin-top: 2px; }
+.hc-divider { height: 1px; background: var(--border); margin: 16px 0; }
+.hc-info { display: flex; flex-direction: column; gap: 8px; }
+.hc-info-row { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.hc-info-row .ico { font-size: 14px; flex-shrink: 0; }
+
+/* ── SECTION BASE ── */
+section { padding: 100px 0; border-top: 1px solid rgba(0,212,200,0.06); }
+.sec-tag {
+  display: inline-flex; align-items: center; gap: 10px; margin-bottom: 12px;
+  font-family: var(--mono); font-size: 10px; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--teal);
+}
+.sec-tag::before { content: ''; width: 28px; height: 1.5px; background: var(--teal); }
+.sec-title {
+  font-family: var(--display); font-size: clamp(36px, 4.5vw, 54px);
+  font-weight: 900; letter-spacing: -0.04em; line-height: .94; margin-bottom: 48px;
+}
+.sec-title span {
+  background: linear-gradient(135deg, var(--teal), #0099ff);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.sec-sub { font-size: 16px; color: var(--muted); max-width: 560px; margin-bottom: 56px; margin-top: -30px; }
+
+/* ── SKILLS ── */
+.skills-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 32px; }
+.s-tab {
+  padding: 7px 18px; border-radius: 100px;
+  border: 1px solid var(--border); background: transparent;
+  color: var(--muted); font-size: 13px; font-weight: 500;
+  cursor: pointer; font-family: var(--font); transition: all .2s;
+}
+.s-tab.active, .s-tab:hover { border-color: var(--teal); color: var(--teal); background: rgba(0,212,200,0.08); }
+.skills-panel { display: none; }
+.skills-panel.active { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.skill-card {
+  padding: 20px 18px; border-radius: 14px;
+  background: var(--card); border: 1px solid var(--border);
+  transition: all .3s;
+}
+.skill-card:hover { border-color: rgba(0,212,200,0.3); transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,.4); }
+.sk-icon { font-size: 26px; margin-bottom: 12px; }
+.sk-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.sk-level { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-bottom: 10px; }
+.sk-bar { height: 3px; background: var(--dim); border-radius: 2px; overflow: hidden; }
+.sk-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--teal), #0099ff); transition: width 1s ease; }
+
+/* ── EXPERIENCE ── */
+.exp-grid { display: flex; flex-direction: column; gap: 3px; }
+.exp-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 18px; overflow: hidden; transition: all .3s;
+}
+.exp-card:hover { border-color: rgba(0,212,200,0.25); box-shadow: 0 8px 32px rgba(0,0,0,.4); }
+.exp-header {
+  padding: 24px 28px; display: flex; align-items: flex-start;
+  justify-content: space-between; flex-wrap: wrap; gap: 14px; cursor: pointer;
+}
+.exp-left { display: flex; align-items: flex-start; gap: 16px; }
+.exp-logo {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
+  flex-shrink: 0; border: 1px solid var(--border);
+}
+.exp-company { font-family: var(--display); font-size: 18px; font-weight: 800; letter-spacing: -0.02em; }
+.exp-role { font-size: 13px; color: var(--muted); margin-top: 3px; }
+.exp-date { font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap; padding-top: 4px; }
+.exp-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.exp-tag {
+  padding: 3px 10px; border-radius: 100px; font-size: 11px;
+  border: 1px solid; font-weight: 500;
+}
+.exp-body { display: none; padding: 0 28px 24px; border-top: 1px solid var(--border); }
+.exp-body.open { display: block; }
+.exp-bullets { margin-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+.exp-bullet {
+  display: flex; gap: 12px; font-size: 13.5px;
+  color: rgba(240,248,255,0.75); line-height: 1.7;
+}
+.exp-bullet::before { content: '▸'; color: var(--teal); flex-shrink: 0; margin-top: 2px; }
+.exp-env {
+  margin-top: 18px; padding: 14px 16px;
+  background: rgba(0,212,200,0.04); border-radius: 10px;
+  border: 1px solid rgba(0,212,200,0.1);
+}
+.exp-env-lbl { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+.exp-env-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.env-pill {
+  font-family: var(--mono); font-size: 11px; padding: 3px 10px;
+  border-radius: 6px; background: rgba(0,212,200,0.07);
+  border: 1px solid rgba(0,212,200,0.15); color: rgba(0,212,200,0.85);
+}
+
+/* ── PROJECTS ── */
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.proj-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 18px; padding: 26px; overflow: hidden;
+  position: relative; transition: all .3s;
+}
+.proj-card:hover { border-color: rgba(0,212,200,0.3); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,.5); }
+.proj-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; transition: opacity .3s; opacity: 0; }
+.proj-card:hover::before { opacity: 1; }
+.proj-icon { font-size: 32px; margin-bottom: 16px; }
+.proj-company { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.proj-title { font-family: var(--display); font-size: 17px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px; }
+.proj-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
+.proj-techs { display: flex; flex-wrap: wrap; gap: 6px; }
+.proj-tech { font-size: 11px; padding: 3px 9px; border-radius: 6px; font-family: var(--mono); }
+
+/* ── CONTACT ── */
+.contact-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
+.contact-info { display: flex; flex-direction: column; gap: 20px; margin-bottom: 40px; }
+.ci-row {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 18px; border-radius: 12px;
+  background: var(--card); border: 1px solid var(--border);
+  transition: all .25s;
+}
+.ci-row:hover { border-color: rgba(0,212,200,0.3); }
+.ci-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.ci-label { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.ci-value { font-size: 14px; font-weight: 600; color: var(--white); }
+
+/* Contact form */
+.contact-form {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 36px 32px; position: relative; overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,.4);
+}
+.contact-form::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--teal), #0099ff, var(--violet)); }
+.cf-title { font-family: var(--display); font-size: 20px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 4px; }
+.cf-sub { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--muted); margin-bottom: 24px; }
+.cf-field { margin-bottom: 14px; }
+.cf-field label { display: block; font-family: var(--mono); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--muted); margin-bottom: 7px; }
+.cf-field input, .cf-field select, .cf-field textarea {
+  width: 100%; padding: 11px 14px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(0,212,200,0.12);
+  border-radius: 10px; color: var(--white); font-size: 13.5px;
+  font-family: var(--font); outline: none; transition: all .22s;
+}
+.cf-field input::placeholder, .cf-field textarea::placeholder { color: #2a4060; }
+.cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus {
+  border-color: var(--teal); background: rgba(0,212,200,0.06);
+  box-shadow: 0 0 0 3px rgba(0,212,200,.1);
+}
+.cf-field select { cursor: pointer; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5.5 6L10 1' stroke='%235a7a9a' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center; padding-right: 34px;
+}
+.cf-field select option { background: #0a1525; }
+.cf-field textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
+.cf-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cf-err { font-size: 11px; color: #f87171; margin-top: 4px; font-family: var(--mono); }
+.err-bar { display: none; padding: 10px 14px; border-radius: 9px; margin-bottom: 12px; background: rgba(239,68,68,.1); border: 1px solid rgba(239,68,68,.2); font-size: 12px; color: #f87171; }
+.err-bar.show { display: block; }
+.cf-submit {
+  width: 100%; padding: 13px; border-radius: 11px; border: none;
+  background: linear-gradient(135deg, var(--teal), #0099ff);
+  color: var(--bg); font-size: 14px; font-weight: 800;
+  cursor: pointer; font-family: var(--font); transition: all .25s;
+  box-shadow: 0 4px 20px var(--glow); margin-top: 6px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.cf-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,212,200,0.45); }
+.cf-submit:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+.spin { width: 15px; height: 15px; border: 2px solid rgba(0,0,0,.3); border-top-color: var(--bg); border-radius: 50%; animation: spin .7s linear infinite; display: none; }
+.sending .spin { display: block; } .sending .btn-label { display: none; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Success */
+.cf-success { display: none; flex-direction: column; align-items: center; text-align: center; padding: 32px 16px; }
+.success-ring { width: 64px; height: 64px; border-radius: 50%; background: rgba(0,212,200,.1); border: 2px solid rgba(0,212,200,.35); display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 16px; animation: pop .5s cubic-bezier(.34,1.56,.64,1) both; }
+@keyframes pop { from{transform:scale(0);opacity:0} to{transform:scale(1);opacity:1} }
+.cf-success h3 { font-family: var(--display); font-size: 20px; font-weight: 800; color: var(--teal); margin-bottom: 8px; }
+.cf-success p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+.cf-reset { margin-top: 14px; padding: 8px 20px; border-radius: 9px; border: 1px solid var(--border); background: transparent; color: var(--muted); font-size: 12px; cursor: pointer; font-family: var(--font); transition: all .2s; }
+.cf-reset:hover { border-color: var(--teal); color: var(--teal); }
+
+/* ── FOOTER ── */
+footer {
+  padding: 32px 0; border-top: 1px solid rgba(0,212,200,0.08);
+  background: rgba(3,8,15,.95);
+}
+.footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-brand { display: flex; align-items: center; gap: 10px; }
+.footer-av { width: 30px; height: 30px; border-radius: 7px; background: linear-gradient(135deg, var(--teal), #0099ff); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 12px; font-weight: 800; color: var(--bg); }
+.footer-copy { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.footer-links { display: flex; gap: 20px; }
+.footer-link { font-family: var(--mono); font-size: 11px; color: var(--muted); transition: color .2s; }
+.footer-link:hover { color: var(--teal); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeDown { from{opacity:0;transform:translateY(-14px)} to{opacity:1;transform:translateY(0)} }
+.rv { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s cubic-bezier(.4,0,.2,1); }
+.rv.in { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .projects-grid { grid-template-columns: repeat(2,1fr); }
+  .contact-wrap { grid-template-columns: 1fr; }
+  .skills-panel.active { grid-template-columns: repeat(3,1fr); }
+}
+@media(max-width:768px) {
+  .container { padding: 0 20px; }
+  nav .container { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero-stats { gap: 28px; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .skills-panel.active { grid-template-columns: repeat(2,1fr); }
+  .cf-row2 { grid-template-columns: 1fr; }
+  section { padding: 72px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- Background -->
+<div class="bg-layer">
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb1"></div>
+  <div class="bg-orb orb2"></div>
+  <div class="bg-orb orb3"></div>
+</div>
+
+<div class="page">
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <div class="nav-avatar">RK</div>
+        <div class="nav-name">Ramandeep<span>.</span>dev</div>
+      </div>
+      <div class="nav-links">
+        <a href="#about"    class="nav-link">About</a>
+        <a href="#skills"   class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact"  class="nav-link">Contact</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <div class="nav-status"><div class="status-dot"></div>Available</div>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="about">
+  <div class="container">
+    <div class="hero-inner">
+      <div style="animation:fadeUp .7s .1s ease both;">
+        <div class="hero-tag">UI Architect · Full Stack Developer</div>
+        <h1 class="hero-title">
+          Building<br/>
+          Enterprise<br/>
+          <span class="grad">Digital Products</span><br/>
+          at Scale.
+        </h1>
+        <p class="hero-sub">
+          <strong>Ramandeep Kaur</strong> — 11+ years architecting
+          Angular, React, and Java Spring Boot applications for
+          <strong>Citibank</strong>, <strong>Pfizer</strong>, and
+          <strong>SynergyLynk IT</strong>. US Citizen based in <strong>Carteret, NJ</strong>.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">🚀 Let's Work Together</a>
+          <a href="#experience" class="btn-ghost">📋 View Experience</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><div class="stat-num">11+</div><div class="stat-label">Years Exp</div></div>
+          <div class="stat"><div class="stat-num">60+</div><div class="stat-label">Microservices</div></div>
+          <div class="stat"><div class="stat-num">6</div><div class="stat-label">Squads Led</div></div>
+          <div class="stat"><div class="stat-num">$140K</div><div class="stat-label">Target Role</div></div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hc-row">
+          <div class="hc-title">Tech Stack</div>
+          <div class="hc-live"><div class="hc-dot"></div>Available Now</div>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-item">Angular 2–17<span>Expert · 10+ yrs</span></div>
+          <div class="skill-item">React + Redux<span>Advanced · 4+ yrs</span></div>
+          <div class="skill-item">TypeScript<span>Expert · 8+ yrs</span></div>
+          <div class="skill-item">Java Spring Boot<span>Integrator · 5+ yrs</span></div>
+          <div class="skill-item">Node.js / Express<span>Advanced · 5+ yrs</span></div>
+          <div class="skill-item">AWS + Azure<span>Cloud · 3+ yrs</span></div>
+          <div class="skill-item">C# / .NET Core<span>SynergyLynk</span></div>
+          <div class="skill-item">CI/CD Pipelines<span>Jenkins · GitLab · GHA</span></div>
+        </div>
+        <div class="hc-divider"></div>
+        <div class="hc-info">
+          <div class="hc-info-row"><span class="ico">📍</span>Carteret, NJ 07008 — NYC Metro</div>
+          <div class="hc-info-row"><span class="ico">✅</span>US Citizen — No Sponsorship Needed</div>
+          <div class="hc-info-row"><span class="ico">🏢</span>Open to Onsite · Hybrid · Remote</div>
+          <div class="hc-info-row"><span class="ico">📧</span>raman.kaur4005@gmail.com</div>
+          <div class="hc-info-row"><span class="ico">📞</span>848-242-0200</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ -->
+<section id="skills">
+  <div class="container">
+    <div class="sec-tag rv">Technical Expertise</div>
+    <h2 class="sec-title rv">Skills &amp; <span>Technologies</span></h2>
+    <p class="sec-sub rv">11+ years of hands-on experience across the full stack — from pixel-perfect Angular UIs to Java Spring Boot microservices and AWS cloud infrastructure.</p>
+
+    <div class="skills-tabs rv">
+      <button class="s-tab active" onclick="showSkills('frontend', this)">Frontend</button>
+      <button class="s-tab" onclick="showSkills('backend', this)">Backend</button>
+      <button class="s-tab" onclick="showSkills('cloud', this)">Cloud & DevOps</button>
+      <button class="s-tab" onclick="showSkills('tools', this)">Tools & Methods</button>
+    </div>
+
+    <div class="skills-panel active rv" id="sk-frontend">
+      <div class="skill-card"><div class="sk-icon">⚡</div><div class="sk-name">Angular 2–17</div><div class="sk-level">Expert · 10+ years</div><div class="sk-bar"><div class="sk-fill" style="width:98%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">⚛</div><div class="sk-name">React + Hooks</div><div class="sk-level">Advanced · 4+ years</div><div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🔷</div><div class="sk-name">TypeScript</div><div class="sk-level">Expert · 8+ years</div><div class="sk-bar"><div class="sk-fill" style="width:96%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🌊</div><div class="sk-name">RxJS</div><div class="sk-level">Expert · 8+ years</div><div class="sk-bar"><div class="sk-fill" style="width:94%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🎨</div><div class="sk-name">Angular Material</div><div class="sk-level">Expert · CDK + Theming</div><div class="sk-bar"><div class="sk-fill" style="width:96%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">💅</div><div class="sk-name">HTML5 / CSS3 / SCSS</div><div class="sk-level">Expert · Responsive Design</div><div class="sk-bar"><div class="sk-fill" style="width:97%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🗃</div><div class="sk-name">NgRx / Redux Toolkit</div><div class="sk-level">Advanced · State Management</div><div class="sk-bar"><div class="sk-fill" style="width:88%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🔗</div><div class="sk-name">Vue.js / Vuetify</div><div class="sk-level">Proficient · ITN Torrential</div><div class="sk-bar"><div class="sk-fill" style="width:76%"></div></div></div>
+    </div>
+
+    <div class="skills-panel" id="sk-backend">
+      <div class="skill-card"><div class="sk-icon">☕</div><div class="sk-name">Java / Spring Boot</div><div class="sk-level">Advanced Integrator · 5+ yrs</div><div class="sk-bar"><div class="sk-fill" style="width:82%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🟢</div><div class="sk-name">Node.js / Express</div><div class="sk-level">Advanced · BFF + APIs</div><div class="sk-bar"><div class="sk-fill" style="width:88%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🔷</div><div class="sk-name">C# / ASP.NET Core</div><div class="sk-level">Advanced · SynergyLynk</div><div class="sk-bar"><div class="sk-fill" style="width:82%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🐘</div><div class="sk-name">PostgreSQL / MySQL</div><div class="sk-level">Advanced · Schema Design</div><div class="sk-bar"><div class="sk-fill" style="width:84%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🍃</div><div class="sk-name">MongoDB</div><div class="sk-level">Proficient · NoSQL</div><div class="sk-bar"><div class="sk-fill" style="width:75%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">⚡</div><div class="sk-name">Redis</div><div class="sk-level">Advanced · Caching + Sessions</div><div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🔴</div><div class="sk-name">GraphQL</div><div class="sk-level">Advanced · AEM + BFF</div><div class="sk-bar"><div class="sk-fill" style="width:80%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🔌</div><div class="sk-name">REST / WebSockets</div><div class="sk-level">Expert · Real-time APIs</div><div class="sk-bar"><div class="sk-fill" style="width:95%"></div></div></div>
+    </div>
+
+    <div class="skills-panel" id="sk-cloud">
+      <div class="skill-card"><div class="sk-icon">☁️</div><div class="sk-name">AWS (EC2/S3/RDS/CF)</div><div class="sk-level">Advanced · SynergyLynk</div><div class="sk-bar"><div class="sk-fill" style="width:82%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🔵</div><div class="sk-name">Azure (App/SQL/ADF)</div><div class="sk-level">Advanced · Medical Client</div><div class="sk-bar"><div class="sk-fill" style="width:84%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🏗</div><div class="sk-name">Azure DevOps</div><div class="sk-level">Advanced · CI/CD Pipelines</div><div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🐙</div><div class="sk-name">GitHub Actions</div><div class="sk-level">Advanced · Automation</div><div class="sk-bar"><div class="sk-fill" style="width:87%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">⚙️</div><div class="sk-name">Jenkins / CircleCI</div><div class="sk-level">Advanced · Citibank / Pfizer</div><div class="sk-bar"><div class="sk-fill" style="width:86%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🐳</div><div class="sk-name">Docker / Containers</div><div class="sk-level">Advanced · Deployments</div><div class="sk-bar"><div class="sk-fill" style="width:80%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🔒</div><div class="sk-name">OAuth2 / JWT / PKCE</div><div class="sk-level">Expert · Azure AD + Okta</div><div class="sk-bar"><div class="sk-fill" style="width:92%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">📊</div><div class="sk-name">SHIR / Azure Data Factory</div><div class="sk-level">Advanced · ETL Pipelines</div><div class="sk-bar"><div class="sk-fill" style="width:78%"></div></div></div>
+    </div>
+
+    <div class="skills-panel" id="sk-tools">
+      <div class="skill-card"><div class="sk-icon">🧪</div><div class="sk-name">Jasmine / Jest / Karma</div><div class="sk-level">Advanced · TDD / 75% Coverage</div><div class="sk-bar"><div class="sk-fill" style="width:86%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🌲</div><div class="sk-name">Nx Monorepo</div><div class="sk-level">Advanced · MFE Architecture</div><div class="sk-bar"><div class="sk-fill" style="width:82%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">📦</div><div class="sk-name">Webpack Module Federation</div><div class="sk-level">Expert · Micro Frontends</div><div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🎫</div><div class="sk-name">JIRA / Confluence</div><div class="sk-level">Advanced · Agile / SAFe</div><div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🤖</div><div class="sk-name">Claude Code + ChatGPT</div><div class="sk-level">Daily · AI-assisted Dev</div><div class="sk-bar"><div class="sk-fill" style="width:88%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">♿</div><div class="sk-name">Accessibility (WCAG 2.1)</div><div class="sk-level">Expert · Citibank AA Standard</div><div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">🔍</div><div class="sk-name">SonarQube / OWASP ZAP</div><div class="sk-level">Advanced · Security Scanning</div><div class="sk-bar"><div class="sk-fill" style="width:82%"></div></div></div>
+      <div class="skill-card"><div class="sk-icon">📐</div><div class="sk-name">Agile / SAFe / Scrum</div><div class="sk-level">Expert · 6-Squad Coordination</div><div class="sk-bar"><div class="sk-fill" style="width:92%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section id="experience">
+  <div class="container">
+    <div class="sec-tag rv">Career History</div>
+    <h2 class="sec-title rv">Professional <span>Experience</span></h2>
+    <p class="sec-sub rv">11+ years building enterprise-grade applications across finance, healthcare, insurance, and education sectors.</p>
+
+    <div class="exp-grid rv">
+
+      <!-- SynergyLynk -->
+      <div class="exp-card">
+        <div class="exp-header" onclick="toggleExp(this)">
+          <div class="exp-left">
+            <div class="exp-logo" style="background:rgba(0,212,200,0.1);border-color:rgba(0,212,200,0.2);">💻</div>
+            <div>
+              <div class="exp-company">SynergyLynk IT</div>
+              <div class="exp-role">UI Architect / Senior Full Stack Developer</div>
+              <div class="exp-tags">
+                <span class="exp-tag" style="background:rgba(0,212,200,0.08);color:var(--teal);border-color:rgba(0,212,200,0.2);">Current Role</span>
+                <span class="exp-tag" style="background:rgba(34,197,94,0.08);color:#22c55e;border-color:rgba(34,197,94,0.2);">Full Time</span>
+                <span class="exp-tag" style="background:rgba(255,255,255,0.05);color:var(--muted);border-color:var(--border);">NY / NJ</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-date">Aug 2025 – Present</div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-bullets">
+            <div class="exp-bullet">Leading UI architecture and full-stack development — React, TypeScript, C# ASP.NET Core, Node.js — owning end-to-end delivery across 4 simultaneous client digital product engagements.</div>
+            <div class="exp-bullet">Building a HIPAA-compliant healthcare IT platform with React/TypeScript patient portal, C# ASP.NET Core 6 API, Azure SQL Database, and SHIR-based Azure Data Factory ETL pipelines for on-premise to cloud patient record migration.</div>
+            <div class="exp-bullet">Architecting a real-time network monitoring dashboard using React, WebSockets, and C# SignalR — reduced client incident response time from 15 minutes to under 4 minutes.</div>
+            <div class="exp-bullet">Pioneering AI-assisted development with Claude Code and ChatGPT for autonomous code generation, unit test scaffolding, and technical documentation — accelerating delivery by ~40%.</div>
+            <div class="exp-bullet">Established CI/CD pipelines via Azure DevOps and GitHub Actions with SonarCloud quality gates, OWASP ZAP security scanning, and zero-downtime Azure App Service slot-swap deployments.</div>
+          </div>
+          <div class="exp-env">
+            <div class="exp-env-lbl">Environment</div>
+            <div class="exp-env-pills">
+              <span class="env-pill">React</span><span class="env-pill">TypeScript</span><span class="env-pill">C#</span><span class="env-pill">ASP.NET Core 6</span><span class="env-pill">Entity Framework</span><span class="env-pill">SignalR</span><span class="env-pill">Azure</span><span class="env-pill">SHIR</span><span class="env-pill">Node.js</span><span class="env-pill">PostgreSQL</span><span class="env-pill">GitHub Actions</span><span class="env-pill">Claude Code</span><span class="env-pill">ChatGPT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Citibank -->
+      <div class="exp-card">
+        <div class="exp-header" onclick="toggleExp(this)">
+          <div class="exp-left">
+            <div class="exp-logo" style="background:rgba(37,99,235,0.1);border-color:rgba(37,99,235,0.2);">🏦</div>
+            <div>
+              <div class="exp-company">Citibank</div>
+              <div class="exp-role">UI Architect / Lead Frontend Engineer</div>
+              <div class="exp-tags">
+                <span class="exp-tag" style="background:rgba(37,99,235,0.08);color:#60a5fa;border-color:rgba(37,99,235,0.2);">4.5 Years</span>
+                <span class="exp-tag" style="background:rgba(255,255,255,0.05);color:var(--muted);border-color:var(--border);">Irving, TX (Remote)</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-date">Feb 2021 – Jun 2025</div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-bullets">
+            <div class="exp-bullet">Designed and led Micro Frontend architecture using Webpack Module Federation — 6 independent Angular/React remote apps behind one Angular shell, reducing regression cycles by 40% and enabling independent squad deployments.</div>
+            <div class="exp-bullet">Built real-time FX trading dashboards with Angular + WebSockets receiving price updates every 100–200ms — implemented bufferTime batching, OnPush change detection, and AG Grid virtual scrolling for 10,000+ row trade blotters.</div>
+            <div class="exp-bullet">Built Node.js/Express BFF layer aggregating 4 Java Spring Boot microservices into single responses — reduced Angular HTTP calls from 4 to 1, improving dashboard load time by 60%.</div>
+            <div class="exp-bullet">Implemented OAuth2 PKCE with Azure AD, refresh token rotation, CORS policies across 60+ microservices, and CHIPS-compliant cookie strategies for cross-site iframe authentication.</div>
+            <div class="exp-bullet">Reduced initial bundle from 4.2MB to 890KB via lazy loading of 8 feature modules; enforced 75% unit test coverage gate in CircleCI CI/CD pipeline; mentored 4 junior engineers.</div>
+          </div>
+          <div class="exp-env">
+            <div class="exp-env-lbl">Environment</div>
+            <div class="exp-env-pills">
+              <span class="env-pill">Angular 9–14</span><span class="env-pill">React</span><span class="env-pill">TypeScript</span><span class="env-pill">RxJS</span><span class="env-pill">NgRx</span><span class="env-pill">WebSockets</span><span class="env-pill">Node.js</span><span class="env-pill">GraphQL</span><span class="env-pill">Webpack MF</span><span class="env-pill">AG Grid</span><span class="env-pill">CircleCI</span><span class="env-pill">Java Spring Boot</span><span class="env-pill">Redis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pfizer -->
+      <div class="exp-card">
+        <div class="exp-header" onclick="toggleExp(this)">
+          <div class="exp-left">
+            <div class="exp-logo" style="background:rgba(124,58,237,0.1);border-color:rgba(124,58,237,0.2);">💊</div>
+            <div>
+              <div class="exp-company">Pfizer</div>
+              <div class="exp-role">Senior Frontend Developer</div>
+              <div class="exp-tags">
+                <span class="exp-tag" style="background:rgba(124,58,237,0.08);color:#a78bfa;border-color:rgba(124,58,237,0.2);">Healthcare</span>
+                <span class="exp-tag" style="background:rgba(255,255,255,0.05);color:var(--muted);border-color:var(--border);">Peapack, NJ</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-date">Jan 2020 – Jan 2021</div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-bullets">
+            <div class="exp-bullet">Built Defect Tracking Tool in React/Redux Saga — enterprise-wide QA platform with multi-dimensional filtering, D3 analytics dashboards, and Java Spring Boot REST API integration via Axios.</div>
+            <div class="exp-bullet">Implemented OAuth2 federation supporting dual identity providers — Azure AD for @pfizer.com employees and Okta for contractors — transparently from a single React SPA.</div>
+            <div class="exp-bullet">Migrated legacy AngularJS SPA to React + Node.js SSR stack; automated SAST/DAST pipelines using OWASP ZAP and SonarQube in Jenkins and GitHub Actions.</div>
+          </div>
+          <div class="exp-env">
+            <div class="exp-env-lbl">Environment</div>
+            <div class="exp-env-pills">
+              <span class="env-pill">React</span><span class="env-pill">Redux Saga</span><span class="env-pill">TypeScript</span><span class="env-pill">Node.js</span><span class="env-pill">Spring Boot</span><span class="env-pill">Azure AD</span><span class="env-pill">Okta</span><span class="env-pill">Jenkins</span><span class="env-pill">SonarQube</span><span class="env-pill">OWASP ZAP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITN/Torrential -->
+      <div class="exp-card">
+        <div class="exp-header" onclick="toggleExp(this)">
+          <div class="exp-left">
+            <div class="exp-logo" style="background:rgba(234,179,8,0.1);border-color:rgba(234,179,8,0.2);">🌊</div>
+            <div>
+              <div class="exp-company">ITN Services / Torrential</div>
+              <div class="exp-role">UI Lead Developer</div>
+              <div class="exp-tags">
+                <span class="exp-tag" style="background:rgba(234,179,8,0.08);color:#fbbf24;border-color:rgba(234,179,8,0.2);">Vue.js</span>
+                <span class="exp-tag" style="background:rgba(255,255,255,0.05);color:var(--muted);border-color:var(--border);">Manhattan, NY</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-date">May 2018 – Apr 2019</div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-bullets">
+            <div class="exp-bullet">Led Vue.js/Vuetify migration from v1.5.x to v2.1.14 across Project 360 campaign management SPA — incremental module-by-module migration over 3 months with zero production downtime.</div>
+            <div class="exp-bullet">Built Node.js REST APIs for banking application integrating Oracle + SOAP APIs via node-soap; added Redis caching reducing response time from 600ms to 50ms. Optimized Time-to-Interactive by 30% via lazy loading and Brotli/GZIP compression.</div>
+          </div>
+          <div class="exp-env">
+            <div class="exp-env-lbl">Environment</div>
+            <div class="exp-env-pills">
+              <span class="env-pill">Vue.js</span><span class="env-pill">Vuetify 2</span><span class="env-pill">Node.js</span><span class="env-pill">D3.js</span><span class="env-pill">Redis</span><span class="env-pill">SOAP APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Earlier roles -->
+      <div class="exp-card">
+        <div class="exp-header" onclick="toggleExp(this)">
+          <div class="exp-left">
+            <div class="exp-logo" style="background:rgba(239,68,68,0.1);border-color:rgba(239,68,68,0.2);">🏫</div>
+            <div>
+              <div class="exp-company">NYC DOE · Guy Carpenter · Rutgers University</div>
+              <div class="exp-role">Frontend Developer → UI Lead</div>
+              <div class="exp-tags">
+                <span class="exp-tag" style="background:rgba(255,255,255,0.05);color:var(--muted);border-color:var(--border);">Earlier Career</span>
+                <span class="exp-tag" style="background:rgba(255,255,255,0.05);color:var(--muted);border-color:var(--border);">2014 – 2019</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-date">Dec 2014 – Apr 2018</div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-bullets">
+            <div class="exp-bullet"><strong>NYC DOE (2018–19):</strong> Angular 6 applications — Salary App, ADVANCE evaluation tool, and Star Classroom using Bootstrap 4, Kendo Grid, and C#/.NET backend. First hands-on C# integration experience.</div>
+            <div class="exp-bullet"><strong>Guy Carpenter (2017–18):</strong> Angular 2/4 Message Tracking SPA for global reinsurance workflows. Implemented SSO using Apigee OAuth2, ran Angular app on Node.js server instance.</div>
+            <div class="exp-bullet"><strong>Rutgers University (2015–16):</strong> AngularJS EGYAN assessment platform for teachers — mastery assessment modules, REST API integration. Built foundation CSS/responsive skills without CSS Grid.</div>
+          </div>
+          <div class="exp-env">
+            <div class="exp-env-lbl">Environment</div>
+            <div class="exp-env-pills">
+              <span class="env-pill">Angular 2–6</span><span class="env-pill">AngularJS</span><span class="env-pill">C# / .NET</span><span class="env-pill">Apigee</span><span class="env-pill">Bootstrap</span><span class="env-pill">Kendo Grid</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJECTS ═══ -->
+<section id="projects">
+  <div class="container">
+    <div class="sec-tag rv">Selected Work</div>
+    <h2 class="sec-title rv">Key <span>Projects</span></h2>
+    <p class="sec-sub rv">Production applications built for global enterprises — from real-time trading systems to HIPAA-compliant healthcare platforms.</p>
+
+    <div class="projects-grid rv">
+
+      <div class="proj-card" style="--acc:#00d4c8;">
+        <div class="proj-card" style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#00d4c8,#0099ff);"></div>
+        <div class="proj-icon">📈</div>
+        <div class="proj-company">Citibank · 2021–2025</div>
+        <div class="proj-title">FX Trading Platform</div>
+        <div class="proj-desc">Real-time FX trade blotter with Angular + WebSocket price feeds updating 100–200ms. OnPush + bufferTime rendering 5,000+ DOM updates/sec. Micro Frontend architecture across 6 product squads.</div>
+        <div class="proj-techs">
+          <span class="proj-tech" style="background:rgba(0,212,200,0.08);color:var(--teal);border:1px solid rgba(0,212,200,0.15);">Angular 14</span>
+          <span class="proj-tech" style="background:rgba(0,212,200,0.08);color:var(--teal);border:1px solid rgba(0,212,200,0.15);">WebSockets</span>
+          <span class="proj-tech" style="background:rgba(0,212,200,0.08);color:var(--teal);border:1px solid rgba(0,212,200,0.15);">RxJS</span>
+          <span class="proj-tech" style="background:rgba(0,212,200,0.08);color:var(--teal);border:1px solid rgba(0,212,200,0.15);">AG Grid</span>
+          <span class="proj-tech" style="background:rgba(0,212,200,0.08);color:var(--teal);border:1px solid rgba(0,212,200,0.15);">MFE</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon">🏥</div>
+        <div class="proj-company">SynergyLynk IT · 2025</div>
+        <div class="proj-title">HIPAA Healthcare Platform</div>
+        <div class="proj-desc">Patient portal + clinical dashboard. C# ASP.NET Core 6 API, Azure SQL, SHIR-based Data Factory ETL for on-prem to cloud patient record migration. Azure AD SSO with RBAC.</div>
+        <div class="proj-techs">
+          <span class="proj-tech" style="background:rgba(37,99,235,0.08);color:#60a5fa;border:1px solid rgba(37,99,235,0.15);">React</span>
+          <span class="proj-tech" style="background:rgba(37,99,235,0.08);color:#60a5fa;border:1px solid rgba(37,99,235,0.15);">C# .NET</span>
+          <span class="proj-tech" style="background:rgba(37,99,235,0.08);color:#60a5fa;border:1px solid rgba(37,99,235,0.15);">Azure</span>
+          <span class="proj-tech" style="background:rgba(37,99,235,0.08);color:#60a5fa;border:1px solid rgba(37,99,235,0.15);">SHIR</span>
+          <span class="proj-tech" style="background:rgba(37,99,235,0.08);color:#60a5fa;border:1px solid rgba(37,99,235,0.15);">HIPAA</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon">📡</div>
+        <div class="proj-company">SynergyLynk IT · 2025</div>
+        <div class="proj-title">Network Monitoring Dashboard</div>
+        <div class="proj-desc">Real-time IT operations dashboard for 50+ managed clients. Live server health, bandwidth, alert severity via WebSockets + C# SignalR. Incident response time: 15min → 4min.</div>
+        <div class="proj-techs">
+          <span class="proj-tech" style="background:rgba(0,212,200,0.08);color:var(--teal);border:1px solid rgba(0,212,200,0.15);">React</span>
+          <span class="proj-tech" style="background:rgba(0,212,200,0.08);color:var(--teal);border:1px solid rgba(0,212,200,0.15);">SignalR</span>
+          <span class="proj-tech" style="background:rgba(0,212,200,0.08);color:var(--teal);border:1px solid rgba(0,212,200,0.15);">WebSockets</span>
+          <span class="proj-tech" style="background:rgba(0,212,200,0.08);color:var(--teal);border:1px solid rgba(0,212,200,0.15);">Recharts</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon">❄️</div>
+        <div class="proj-company">Citibank · 2022</div>
+        <div class="proj-title">Snowflake Onboarding Tool</div>
+        <div class="proj-desc">Angular 9 SPA for campaign data configuration across Snowflake data warehouse. Multi-step reactive form wizard, CircleCI pipeline with 75% coverage gate. Bundle: 4.2MB → 890KB.</div>
+        <div class="proj-techs">
+          <span class="proj-tech" style="background:rgba(124,58,237,0.08);color:#a78bfa;border:1px solid rgba(124,58,237,0.15);">Angular 9</span>
+          <span class="proj-tech" style="background:rgba(124,58,237,0.08);color:#a78bfa;border:1px solid rgba(124,58,237,0.15);">TypeScript</span>
+          <span class="proj-tech" style="background:rgba(124,58,237,0.08);color:#a78bfa;border:1px solid rgba(124,58,237,0.15);">CircleCI</span>
+          <span class="proj-tech" style="background:rgba(124,58,237,0.08);color:#a78bfa;border:1px solid rgba(124,58,237,0.15);">Snowflake</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon">🐛</div>
+        <div class="proj-company">Pfizer · 2020</div>
+        <div class="proj-title">Defect Tracking Tool</div>
+        <div class="proj-desc">Enterprise QA platform used company-wide. React/Redux Saga, multi-dimensional filters, D3 analytics. Java Spring Boot REST API + Axios. Azure AD + Okta dual identity provider SSO.</div>
+        <div class="proj-techs">
+          <span class="proj-tech" style="background:rgba(239,68,68,0.08);color:#f87171;border:1px solid rgba(239,68,68,0.15);">React</span>
+          <span class="proj-tech" style="background:rgba(239,68,68,0.08);color:#f87171;border:1px solid rgba(239,68,68,0.15);">Redux Saga</span>
+          <span class="proj-tech" style="background:rgba(239,68,68,0.08);color:#f87171;border:1px solid rgba(239,68,68,0.15);">D3.js</span>
+          <span class="proj-tech" style="background:rgba(239,68,68,0.08);color:#f87171;border:1px solid rgba(239,68,68,0.15);">Spring Boot</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-icon">🏠</div>
+        <div class="proj-company">SynergyLynk IT · 2025</div>
+        <div class="proj-title">IT Self-Service Portal</div>
+        <div class="proj-desc">Customer portal for hosting/IT management. React + ASP.NET Core Web API. Modules: DNS management, uptime monitoring, support tickets. Reduced routine support calls by 60%.</div>
+        <div class="proj-techs">
+          <span class="proj-tech" style="background:rgba(234,179,8,0.08);color:#fbbf24;border:1px solid rgba(234,179,8,0.15);">React</span>
+          <span class="proj-tech" style="background:rgba(234,179,8,0.08);color:#fbbf24;border:1px solid rgba(234,179,8,0.15);">ASP.NET Core</span>
+          <span class="proj-tech" style="background:rgba(234,179,8,0.08);color:#fbbf24;border:1px solid rgba(234,179,8,0.15);">PostgreSQL</span>
+          <span class="proj-tech" style="background:rgba(234,179,8,0.08);color:#fbbf24;border:1px solid rgba(234,179,8,0.15);">AWS</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-tag rv">Get In Touch</div>
+    <h2 class="sec-title rv">Let's Build <span>Something Great</span></h2>
+    <div class="contact-wrap rv">
+
+      <div>
+        <p style="font-size:16px;color:var(--muted);line-height:1.75;margin-bottom:32px;">
+          I am <strong style="color:var(--white);">available for full-time roles</strong> in the NYC/NJ metro area — onsite, hybrid, or remote. Targeting Senior Angular / Full Stack Developer positions at $140K+.
+        </p>
+        <div class="contact-info">
+          <div class="ci-row">
+            <span class="ci-icon">📧</span>
+            <div><div class="ci-label">Email</div><div class="ci-value">raman.kaur4005@gmail.com</div></div>
+          </div>
+          <div class="ci-row">
+            <span class="ci-icon">📞</span>
+            <div><div class="ci-label">Phone</div><div class="ci-value">848-242-0200</div></div>
+          </div>
+          <div class="ci-row">
+            <span class="ci-icon">📍</span>
+            <div><div class="ci-label">Location</div><div class="ci-value">Carteret, NJ 07008 · NYC Metro Area</div></div>
+          </div>
+          <div class="ci-row">
+            <span class="ci-icon">✅</span>
+            <div><div class="ci-label">Work Authorization</div><div class="ci-value">US Citizen — No Sponsorship Required</div></div>
+          </div>
+          <a href="https://www.linkedin.com/in/ramandeep-kaur-337228121/" target="_blank" class="ci-row" style="cursor:pointer;">
+            <span class="ci-icon">💼</span>
+            <div><div class="ci-label">LinkedIn</div><div class="ci-value" style="color:var(--teal);">linkedin.com/in/ramandeep-kaur</div></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div id="contactFormSection">
+          <h3 class="cf-title">Send a Message</h3>
+          <p class="cf-sub">RESPONSE WITHIN 24 HOURS · FREE CONSULTATION</p>
+          <div class="err-bar" id="cfErr"></div>
+          <form id="contactForm">
+            <div class="cf-row2">
+              <div class="cf-field">
+                <label for="cfName">Your Name *</label>
+                <input type="text" id="cfName" placeholder="Your full name"/>
+                <div class="cf-err" id="cfNameErr"></div>
+              </div>
+              <div class="cf-field">
+                <label for="cfCompany">Company</label>
+                <input type="text" id="cfCompany" placeholder="Company name"/>
+              </div>
+            </div>
+            <div class="cf-field">
+              <label for="cfEmail">Email Address *</label>
+              <input type="email" id="cfEmail" placeholder="your@company.com"/>
+              <div class="cf-err" id="cfEmailErr"></div>
+            </div>
+            <div class="cf-field">
+              <label for="cfRole">Opportunity Type</label>
+              <select id="cfRole">
+                <option value="" disabled selected>Select type…</option>
+                <option>Full-time Role — Angular / Frontend</option>
+                <option>Full-time Role — Full Stack</option>
+                <option>Contract / Consulting</option>
+                <option>Technical Architecture Discussion</option>
+                <option>Other Inquiry</option>
+              </select>
+            </div>
+            <div class="cf-field">
+              <label for="cfMsg">Message *</label>
+              <textarea id="cfMsg" rows="4" placeholder="Tell me about the role or project…"></textarea>
+              <div class="cf-err" id="cfMsgErr"></div>
+            </div>
+            <button type="submit" class="cf-submit" id="cfBtn">
+              <div class="spin"></div>
+              <span class="btn-label">🚀 Send Message</span>
+            </button>
+            <div style="text-align:center;font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:10px;letter-spacing:.08em;">📧 DELIVERS TO raman.kaur4005@gmail.com</div>
+          </form>
+        </div>
+        <div class="cf-success" id="cfSuccess">
+          <div class="success-ring">✅</div>
+          <h3>Message Sent!</h3>
+          <p>Thank you for reaching out. I will reply to<br/><strong id="cfReplyTo" style="color:var(--teal)"></strong><br/>within 24 hours.</p>
+          <button class="cf-reset" onclick="resetForm()">← Send Another</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-av">RK</div>
+        <div>
+          <div style="font-family:var(--display);font-size:14px;font-weight:700;letter-spacing:-0.02em;">Ramandeep Kaur</div>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:1px;">UI Architect · Full Stack Developer</div>
+        </div>
+      </div>
+      <div class="footer-copy">© 2025 Ramandeep Kaur · Carteret, NJ · US Citizen</div>
+      <div class="footer-links">
+        <a href="mailto:raman.kaur4005@gmail.com" class="footer-link">📧 Email</a>
+        <a href="https://www.linkedin.com/in/ramandeep-kaur-337228121/" target="_blank" class="footer-link">💼 LinkedIn</a>
+        <a href="#about" class="footer-link">↑ Top</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- end .page -->
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+// ── EmailJS Credentials ─────────────────────────────
+// Replace these 3 values with your real EmailJS credentials:
+var SERVICE_ID  = 'YOUR_SERVICE_ID';     // from EmailJS → Email Services
+var TEMPLATE_ID = 'YOUR_TEMPLATE_ID';   // from EmailJS → Email Templates
+var PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';    // from EmailJS → Account → API Keys
+var TO_EMAIL    = 'raman.kaur4005@gmail.com';
+// ───────────────────────────────────────────────────
+
+emailjs.init({ publicKey: PUBLIC_KEY });
+
+// ── SCROLL REVEAL ──
+const io = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      const siblings = [...e.target.parentElement.querySelectorAll(':scope > .rv')];
+      const idx = siblings.indexOf(e.target);
+      setTimeout(() => e.target.classList.add('in'), idx * 80);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: .06, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+// ── SKILLS TABS ──
+function showSkills(key, btn) {
+  document.querySelectorAll('.skills-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.s-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('sk-' + key).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── EXPERIENCE ACCORDION ──
+function toggleExp(header) {
+  const body = header.nextElementSibling;
+  const isOpen = body.classList.contains('open');
+  document.querySelectorAll('.exp-body').forEach(b => b.classList.remove('open'));
+  if (!isOpen) body.classList.add('open');
+}
+
+// ── CONTACT FORM ──
+var form  = document.getElementById('contactForm');
+var cfBtn = document.getElementById('cfBtn');
+var cfErr = document.getElementById('cfErr');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  // clear errors
+  ['cfNameErr','cfEmailErr','cfMsgErr'].forEach(id => { document.getElementById(id).textContent = ''; });
+  cfErr.classList.remove('show');
+
+  var name    = document.getElementById('cfName').value.trim();
+  var company = document.getElementById('cfCompany').value.trim();
+  var email   = document.getElementById('cfEmail').value.trim();
+  var role    = document.getElementById('cfRole').value;
+  var msg     = document.getElementById('cfMsg').value.trim();
+
+  var ok = true;
+  if (!name)  { document.getElementById('cfNameErr').textContent = 'Name is required'; ok=false; }
+  if (!email) { document.getElementById('cfEmailErr').textContent = 'Email is required'; ok=false; }
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('cfEmailErr').textContent = 'Enter a valid email'; ok=false; }
+  if (!msg)   { document.getElementById('cfMsgErr').textContent = 'Message is required'; ok=false; }
+  if (!ok) return;
+
+  cfBtn.disabled = true;
+  cfBtn.classList.add('sending');
+
+  try {
+    var res = await emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+      to_email:   TO_EMAIL,
+      from_name:  name,
+      company:    company || 'Not provided',
+      from_email: email,
+      reply_to:   email,
+      service:    role || 'Not specified',
+      message:    msg,
+    });
+    if (res.status === 200) {
+      document.getElementById('cfReplyTo').textContent = email;
+      document.getElementById('contactFormSection').style.display = 'none';
+      document.getElementById('cfSuccess').style.display = 'flex';
+    } else { throw new Error('Status ' + res.status); }
+  } catch(err) {
+    cfErr.textContent = 'Could not send. Email me directly: ' + TO_EMAIL;
+    cfErr.classList.add('show');
+  } finally {
+    cfBtn.disabled = false;
+    cfBtn.classList.remove('sending');
+  }
+});
+
+function resetForm() {
+  form.reset();
+  document.getElementById('contactFormSection').style.display = 'block';
+  document.getElementById('cfSuccess').style.display = 'none';
+}
+
+// ── SMOOTH SCROLL + ACTIVE NAV ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// ── OPEN FIRST EXP ON LOAD ──
+window.addEventListener('load', () => {
+  const firstExp = document.querySelector('.exp-body');
+  if (firstExp) firstExp.classList.add('open');
+});
+</script>
+</body>
+</html>
